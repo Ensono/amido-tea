@@ -1,0 +1,223 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+body {
+  background: #fafafa;
+  height: auto;
+  color: #323232;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  height: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  color: #175574;
+  margin-bottom: 22px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: lighter;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 44px;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+button {
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button:focus {
+  outline: none;
+}
+
+p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+a {
+  text-decoration: none;
+  color: #175574;
+}
+a:hover {
+  color: #22738f;
+}
+
+html {
+  font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    padding-top: 68px;
+    line-height: 1;
+
+    .btn {
+      border-radius: 3px;
+      box-sizing: border-box;
+      display: inline-block;
+      background: #79ad2b;
+      color: #fff;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1em;
+      margin: 0;
+      outline: none;
+      padding: 8px 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .container {
+      width: 1020px;
+      margin: 0 auto;
+    }
+
+    .content {
+      section {
+        border: solid 1px #cdd6e3;
+        background: #f4f6f9;
+        .tagline {
+          text-align: center;
+          padding: 40px 10px;
+        }
+      }
+    }
+
+    a.btn {
+      margin-left: 20px;
+    }
+
+    header {
+      height: 68px;
+      position: fixed;
+      top: 0px;
+      z-index: 500;
+      border-bottom: 1px solid #ddd;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+
+      .logo {
+        text-indent: -100%;
+        float: left;
+        width: 130px;
+        height: 38px;
+        margin: 15px 0 0 0;
+        background-image: url('/img/logo.png')
+      }
+
+      nav {
+        float: right;
+        font-size: 12px;
+        font-weight: bold;
+        margin: 19px 0 0 0;
+      }
+    }
+  }
+}
