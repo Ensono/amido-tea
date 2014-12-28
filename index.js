@@ -1,26 +1,30 @@
 var EventEmitter = require('events').EventEmitter,
     HeaderView = require('./lib/ui-header'),
-    Brews = require('./lib/brews'),
-    BrewList = require('./lib/ui'),
+    BrewList = require('./lib/ui-brew-list'),
     ocreate = require('./lib/object-create');
 
 module.exports = AmidoTea;
 
-function AmidoTea() {
+function AmidoTea(isLoggedIn) {
     if (!(this instanceof AmidoTea)) {
-        return new AmidoTea();
+        return new AmidoTea(isLoggedIn);
     }
-    this.brews = new Brews();
-    this.headerView = new HeaderView(this.brews);
+
+    this.isLoggedIn = isLoggedIn;
+
+    this.headerView = new HeaderView();
+    this.headerView
+        .create(isLoggedIn)
+        .render(document.getElementsByTagName('header')[0]);
 
     this.brewList = new BrewList();
-    this.brewList.render('current-round');
+    if (isLoggedIn) {
+        this.brewList
+            .create()
+            .render(document.getElementById('current-round'));
+    }
 }
 
 AmidoTea.version = require('package.version');
 
 AmidoTea.prototype = ocreate(EventEmitter.prototype);
-
-document.addEventListener("DOMContentLoaded", function(event) {
-    window.amidoTea = new AmidoTea();
-});

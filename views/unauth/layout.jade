@@ -8,10 +8,9 @@ html
     script(src='/js/application.js')
   body
     header
-      .container
-        a(href='/')
-          h1.logo ATeaDo
-        nav
-          a#log-in.btn Log In
     .content
       block content
+  script.
+    $(function() {
+        var amidoTea = new AmidoTea(false);
+     });

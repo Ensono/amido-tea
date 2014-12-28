@@ -10,10 +10,9 @@ html
     script(src='/js/application.js')
   body
     header
-      .container
-        a(href='/')
-          h1.logo ATeaDo
-        nav
-          a#i-want-tea.btn I Want a Brew
     .content
       block content
+    script.
+      $(function() {
+        var amidoTea = new AmidoTea(true);
+      });
