@@ -211,15 +211,23 @@ html {
         -moz-transition: height 50ms ease-in;
         transition: height 50ms ease-in;
         margin: 0 auto;
-        text-align: center;
-        border-radius: 3px;
+        border-radius: 15px;
         -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.4);
         box-shadow: 0 1px 10px rgba(0,0,0,.4);
-        font-size: 13px;
         position: relative;
         color: #4d4d4d;
         display: block;
         zoom: 1;
+        padding: 13px;
+
+        .form-group {
+          .form-control {
+            line-height: 1.42857143;
+          }
+          label {
+            margin-bottom: 5px;
+          }
+        }
 
         &:before {
           content: " ";
