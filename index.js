@@ -18,11 +18,10 @@ function AmidoTea(isLoggedIn) {
         .render(document.getElementsByTagName('header')[0]);
 
     this.brewList = new BrewList();
-    if (isLoggedIn) {
-        this.brewList
-            .create()
-            .render(document.getElementById('current-round'));
-    }
+
+    this.brewList
+        .create(isLoggedIn)
+        .render(document.getElementById('current-round'));
 }
 
 AmidoTea.version = require('package.version');
