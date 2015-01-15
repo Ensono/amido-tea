@@ -269,6 +269,13 @@ html body .lightbox .lightbox-wrap {
   zoom: 1;
   padding: 13px;
 }
+html body .lightbox .lightbox-wrap .lightbox-controls {
+  position: relative;
+  float: right;
+}
+html body .lightbox .lightbox-wrap .lightbox-controls .close {
+  cursor: pointer;
+}
 html body .lightbox .lightbox-wrap .form-group .form-control {
   line-height: 1.42857143;
 }
