@@ -216,6 +216,38 @@ html body {
   padding-top: 68px;
   line-height: 1;
 }
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+html body .spinner {
+  min-width: 24px;
+  min-height: 24px;
+}
+html body .spinner:before {
+  content: 'Loading…';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+html body .spinner:not(:required):before {
+  content: '';
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-top-color: rgba(0, 0, 0, 0.6);
+  animation: spinner .6s linear infinite;
+  -webkit-animation: spinner .6s linear infinite;
+}
 html body .btn {
   border-radius: 3px;
   box-sizing: border-box;
@@ -275,6 +307,13 @@ html body .lightbox .lightbox-wrap .lightbox-controls {
 }
 html body .lightbox .lightbox-wrap .lightbox-controls .close {
   cursor: pointer;
+}
+html body .lightbox .lightbox-wrap .blur {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 html body .lightbox .lightbox-wrap .form-group .form-control {
   line-height: 1.42857143;

@@ -162,6 +162,39 @@ html {
     padding-top: 68px;
     line-height: 1;
 
+    @keyframes spinner {
+      to {transform: rotate(360deg);}
+    }
+
+    @-webkit-keyframes spinner {
+      to {-webkit-transform: rotate(360deg);}
+    }
+
+    .spinner {
+      min-width: 24px;
+      min-height: 24px;
+    }
+
+    .spinner:before {
+      content: 'Loading…';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      margin-top: -10px;
+      margin-left: -10px;
+    }
+
+    .spinner:not(:required):before {
+      content: '';
+      border-radius: 50%;
+      border: 2px solid rgba(0, 0, 0, .3);
+      border-top-color: rgba(0, 0, 0, .6);
+      animation: spinner .6s linear infinite;
+      -webkit-animation: spinner .6s linear infinite;
+    }
+
     .btn {
       border-radius: 3px;
       box-sizing: border-box;
@@ -227,6 +260,14 @@ html {
           .close {
             cursor: pointer;
           }
+        }
+
+        .blur {
+          -webkit-filter: blur(2px);
+          -moz-filter: blur(2px);
+          -o-filter: blur(2px);
+          -ms-filter: blur(2px);
+          filter: blur(2px);
         }
 
         .form-group {
