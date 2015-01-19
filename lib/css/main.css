@@ -158,16 +158,18 @@ select {
 }
 body {
   background: #fafafa;
-  color: #323232;
+  color: #fff;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   height: auto;
   -webkit-font-smoothing: antialiased;
+  background: url('/img/bg.jpg') no-repeat;
+  background-size: cover;
 }
 h1,
 h2,
 h3,
 h4 {
-  color: #175574;
+  color: #CFEFFF;
   margin-bottom: 22px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: lighter;
@@ -264,19 +266,20 @@ html body .btn {
   cursor: pointer;
 }
 html body .container {
-  width: 1020px;
+  width: 100%;
   margin: 0 auto;
-}
-html body .content section {
-  border: solid 1px #cdd6e3;
-  background: #f4f6f9;
+  max-width: 1020px;
 }
 html body .content section .tagline {
   text-align: center;
   padding: 40px 10px;
 }
-html body .remove {
+html body table.table {
+  background: rgba(0, 0, 0, 0.4);
+}
+html body a.remove {
   cursor: pointer;
+  color: #efefef;
 }
 html body .lightbox {
   padding: 0;
@@ -364,9 +367,7 @@ html body header {
   position: fixed;
   top: 0px;
   z-index: 500;
-  border-bottom: 1px solid #ddd;
   width: 100%;
-  background: rgba(255, 255, 255, 0.9);
 }
 html body header .logo {
   text-indent: -100%;
@@ -374,7 +375,7 @@ html body header .logo {
   width: 130px;
   height: 38px;
   margin: 15px 0 0 0;
-  background-image: url('/img/logo.png');
+  background-image: url('/img/logo-white.png');
 }
 html body header nav {
   float: right;
