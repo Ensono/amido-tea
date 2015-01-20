@@ -71,7 +71,8 @@
     "hogan.js": "~3.0.2",
     "grunt-express-server": "~0.4.19",
     "grunt-contrib-compress": "~0.12.0",
-    "reactify": "~0.17.1"
+    "reactify": "~0.17.1",
+    "grunt-env": "~0.4.2"
   },
   "browserify-shim": {
     "jquery": "global:jQuery",
