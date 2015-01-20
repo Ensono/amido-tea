@@ -15,6 +15,14 @@ function  rename_release (v) {
 
 module.exports = function(grunt) {
     grunt.initConfig({
+        env : {
+            options : {
+                //Shared Options Hash
+            },
+            dev : {
+                src: 'dev-env.json'
+            }
+        },
         express: {
             options: {},
             dev: {
@@ -150,5 +158,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', ['css', 'js']);
 
-    grunt.registerTask('dev',   ['express:dev', 'build', 'watch'])
+    grunt.registerTask('dev',   ['env', 'express:dev', 'build', 'watch'])
 }
