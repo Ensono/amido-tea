@@ -34,7 +34,8 @@
     "react": "~0.12.2",
     "reactify": "~0.17.1",
     "nodemailer": "~1.3.0",
-    "react-addons": "~0.9.0"
+    "react-addons": "~0.9.0",
+    "node-schedule": "~0.1.15"
   },
   "peerDependencies": {
     "hogan.js": "*"
