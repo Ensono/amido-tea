@@ -79,6 +79,8 @@
   "browserify-shim": {
     "jquery": "global:jQuery",
     "auth0-lock": "global:Auth0Lock",
-    "amido-profile-service": "global:AmidoProfileService"
+    "amido-profile-service": "global:AmidoProfileService",
+    "react": "global:React",
+    "react/addons": "global:React"
   }
 }
