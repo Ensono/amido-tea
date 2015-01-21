@@ -39,7 +39,7 @@ module.exports = function(grunt) {
                     'build/application.js': ['standalone.js']
                 },
                 options: {
-                    transform: ['ejsify', 'brfs', 'packageify', 'browserify-shim', 'reactify']
+                    transform: ['reactify', 'ejsify', 'brfs', 'packageify', 'browserify-shim']
                 }
             },
             debug: {
@@ -150,13 +150,16 @@ module.exports = function(grunt) {
 
     // Loading dependencies
     for (var key in grunt.file.readJSON('package.json').devDependencies) {
-        if (key !== 'grunt' && key.indexOf('grunt') === 0) { grunt.loadNpmTasks(key); }
+        if (key !== 'grunt' && key !== 'grunt-cli' && key.indexOf('grunt') === 0) { grunt.loadNpmTasks(key); }
     }
 
     grunt.registerTask('css',   ['clean:css', 'less:dist', 'cssmin:minify']);
     grunt.registerTask('js',    ['clean:js', 'browserify:debug', 'exec:uglify', 'copy:dev']);
+    grunt.registerTask('js-release',    ['clean:js', 'browserify:release', 'exec:uglify', 'copy:dev']);
 
     grunt.registerTask('build', ['css', 'js']);
+    grunt.registerTask('build-release', ['css', 'js-release']);
 
     grunt.registerTask('dev',   ['env', 'express:dev', 'build', 'watch'])
+    grunt.registerTask('release',   ['build-release'])
 }
