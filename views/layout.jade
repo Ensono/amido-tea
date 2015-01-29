@@ -4,6 +4,21 @@ html
     title The Amido Tea Roundinator 3000
     link(rel='stylesheet', href='/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/main.min.css')
+    | <!--[if lte IE 11]>
+    |  <script type="text/javascript">
+    |    (function () {
+    |      function CustomEvent ( event, params ) {
+    |        params = params || { bubbles: false, cancelable: false, detail: undefined };
+    |        var evt = document.createEvent( 'CustomEvent' );
+    |        evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+    |        return evt;
+    |      };
+    |          CustomEvent.prototype = window.Event.prototype;
+    |  window.CustomEvent = CustomEvent;
+    |  })();
+    |  </script>
+    |<![endif]-->
+
     script(src='http://cdn.auth0.com/js/lock-6.min.js')
     script(src='http://fb.me/JSXTransformer-0.12.2.js')
     script(src='http://fb.me/react-with-addons-0.12.2.min.js')
