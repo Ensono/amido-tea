@@ -79,7 +79,7 @@ module.exports = function(grunt) {
             dev: {
                 files: {
                     'public/js/application.min.js': 'build/application.min.js',
-                    'public/js/application.js':     'build/application.js',
+                    'public/js/application.js':     'build/application.js'
                 }
             },
             release: {
