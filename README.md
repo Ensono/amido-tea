@@ -2,7 +2,7 @@
 
 ## Development
 
-- Clone the repo
+- Fork the repo
 - Create a file in the route called dev-env.json
 - Paste in the following, including the correct values where necessary
 ``` json
@@ -28,3 +28,8 @@
     grunt dev
 
 ... and navigate to http://localhost:3000/
+
+# Contributing
+1. Fork the repo into your own account
+2. Make your changes and commit
+3. Create a pull request
