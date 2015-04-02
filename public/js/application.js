@@ -88,8 +88,8 @@ Auth0.prototype.showLogin = function() {
 },{"q":19,"underscore":20}],3:[function(require,module,exports){
 module.exports = {
     COOKIE_LOGIN: 'atea_ld',
-    SUGAR_CHOICES: ["None", 1, 2, 3, 4, 5]
-}
+    SUGAR_CHOICES: ['None', '1', '2', '3', '4', '5']
+};
 
 },{}],4:[function(require,module,exports){
 //ie9 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill
